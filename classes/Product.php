@@ -41,8 +41,5 @@ class Product {
     }
 }
 
-    $talco = new Product(1, 'talco', 'Il prodotto Borotalco Talcum si prende cura efficacemente della pelle delicata del bambino');
-
-    echo $talco->getId(). " " . $talco->getName() . " ". $talco->getDescription() . ".";
 
 ?>
