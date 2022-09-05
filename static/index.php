@@ -13,8 +13,8 @@ $product1 = new Product(1, "croccantini", "Dei buonissimi croccantini");
 $product2 = new Product(2, "Cuccia", "Una bellissima cuccia");
 
 
-// echo $product1->getId(). " " . $product1->getName() . " ". $product1->getDescription() . ".";
-// echo $user2->getId(). " " . $user2->getName() . ".";
+var_dump($user1);
+var_dump($product2);
 
 
 
