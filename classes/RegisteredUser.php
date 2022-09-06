@@ -34,8 +34,6 @@ class RegisteredUser extends User{
         return $this->username;
     }
 
-
-
 }
 
 // ordine - utente e carta di credito

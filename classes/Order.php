@@ -5,10 +5,12 @@ require_once __DIR__ . '/Product.php';
 require_once __DIR__ . '/Kart.php';
 require_once __DIR__ . '/CreditCard.php';
 
-class User{
+class Order{
 
     protected $kart;
     protected $creditCard;
+    protected $user;
+    protected $orderTotal;
     protected $address;
 
     function __construct($_kart, $_creditCard)
@@ -33,15 +35,6 @@ class User{
         return $this->creditCard;
     }
 
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    public function setAddress($address)
-    {
-        $this->address = $address;
-    }
 }
 
 // ordine - utente e carta di credito

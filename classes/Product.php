@@ -11,13 +11,15 @@ class Product {
     protected $name;
     protected $description;
     protected $price;
+    protected $target;
 
-    function __construct($_id, $_name, $_description, $_price)
+    function __construct($_id, $_name, $_description, $_price, $_target)
     {
         $this->setId($_id);
         $this->setName($_name);
         $this->setDescription($_description);
         $this->setPrice($_price);
+        $this->setTarget($_target);
     }
 
     private function setId($_id){
@@ -35,6 +37,10 @@ class Product {
     private function setPrice($_price){
         $this->price = $_price;
     }
+    
+    private function setTarget($_target){
+        $this->target = $_target;
+    }
 
     public function getId(){
         return $this->id;
@@ -50,6 +56,10 @@ class Product {
 
     public function getPrice(){
         return $this->price;
+    }
+
+    private function getTarget(){
+        return $this->target;
     }
 }
 

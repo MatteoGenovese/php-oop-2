@@ -33,11 +33,6 @@ class UnregisteredUser extends User{
     public function getusername(){
         return $this->username;
     }
-
-    
-
-
 }
-$user= new UnregisteredUser(1,'11111', 1 , 'geno');
-var_dump($user);
+
 // ordine - utente e carta di credito
