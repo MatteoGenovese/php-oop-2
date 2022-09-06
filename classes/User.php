@@ -9,12 +9,14 @@ class User{
 
     protected $id;
     protected $name;
+    protected $creditCard;
 
 
-    function __construct($_id, $_name)
+    function __construct($_id, $_name, $_creditCard)
     {
         $this->setId($_id);
         $this->setName($_name);
+        $this->setCreditCard($_creditCard);
     }
 
 
@@ -26,12 +28,20 @@ class User{
         $this->name = $_name;
     }
 
+    private function setCreditCard($_creditCard){
+        $this->creditCard = $_creditCard;
+    }
+
     public function getId(){
         return $this->id;
     }
 
     public function getName(){
         return $this->name;
+    }
+
+    public function getCreditCard(){
+        return $this->creditCard;
     }
 
 }
