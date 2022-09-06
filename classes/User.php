@@ -7,37 +7,25 @@ require_once __DIR__ . '/CreditCard.php';
 
 class User{
 
-    protected $id;
-    protected $name;
+    protected $kart;
     protected $creditCard;
 
-
-    function __construct($_id, $_name, $_creditCard)
+    function __construct($_kart, $_creditCard)
     {
-        $this->setId($_id);
-        $this->setName($_name);
+        $this->setKart($_kart);
         $this->setCreditCard($_creditCard);
     }
 
-
-    private function setId($_id){
-        $this->id = $_id;
-    }
-
-    private function setName($_name){
-        $this->name = $_name;
+    private function setKart($_kart){
+        $this->kart = $_kart;
     }
 
     private function setCreditCard($_creditCard){
         $this->creditCard = $_creditCard;
     }
 
-    public function getId(){
-        return $this->id;
-    }
-
-    public function getName(){
-        return $this->name;
+    public function getKart(){
+        return $this->kart;
     }
 
     public function getCreditCard(){

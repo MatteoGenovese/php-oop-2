@@ -11,13 +11,15 @@ class CreditCard {
     protected $bank;
     protected $expirationDate;
     protected $backCode;
+    protected $credit;
 
-    function __construct($_id, $_bank, $_expirationDate, $_backCode)
+    function __construct($_id, $_bank, $_expirationDate, $_backCode, $_credit)
     {   
         $this->setId($_id);
         $this->setBank($_bank);
         $this->setExpirationDate($_expirationDate);
         $this->setBackCode($_backCode);
+        $this->setCredit($_credit);
     }
 
     protected function setId($_id){
@@ -32,6 +34,9 @@ class CreditCard {
     protected function setBackCode($_backCode){
         $this->backCode=$_backCode;
     }
+    protected function setCredit($_credit){
+        $this->credit=$_credit;
+    }
 
     public function getId(){
         return $this->id;
@@ -44,6 +49,9 @@ class CreditCard {
     }
     public function getBackCode(){
         return $this->backCode;
+    }
+    public function getCredit(){
+        return $this->credit;
     }
 
 }
