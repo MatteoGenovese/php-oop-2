@@ -13,7 +13,7 @@
 
 require_once __DIR__ . '/../classes/CreditCard.php';
 require_once __DIR__ . '/../classes/Product.php';
-include_once __DIR__ . '/../classes/Cart.php';
+include_once __DIR__ . '/../classes/Kart.php';
 require_once __DIR__ . '/../classes/CreditCard.php';
 require_once __DIR__ . '/../classes/User.php';
 
@@ -23,21 +23,15 @@ $user1 = new User(1, "Paolo", $creditCard1);
 $user2 = new User(2, 'Luca', $creditCard1);
 
 $products=[];
-$products[] = new Product(1 , "croccantini" , "Dei buonissimi croccantini" , 3.99, "Cani");
-$products[] = new Product(2 , "Cuccia" , "Una bellissima cuccia" , 4.99, "Gatti");
+$products[] = new Product(1 , "croccantini" , "Dei buonissimi croccantini" , 3.99);
+$products[] = new Product(2 , "Cuccia" , "Una bellissima cuccia" , 4.99);
 
-$products2=[];
-$products2[] = new Product(1 , "croccantini" , "Dei buonissimi croccantini" , 3.99, "Cani");
-$products2[] = new Product(2 , "Cuccia" , "Una bellissima cuccia" , 4.99, "Gatti");
+$kart1= new Kart(1, $products, $user1);
 
-$cart1= new Cart(1, $user1, $products , new Product(1 , "croccantini" , "Dei buonissimi croccantini" , 3.99, "Cani"), new Product(1 , "croccantini" , "Dei buonissimi croccantini" , 3.99, "Cani"));
-
-// echo $cart1->getCartTotal();
-
-// var_dump($creditCard1);
-// var_dump($user1);
-// var_dump($products);
-var_dump($cart1);
+var_dump($creditCard1);
+var_dump($user1);
+var_dump($products);
+var_dump($kart1);
 
 
 

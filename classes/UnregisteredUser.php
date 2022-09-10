@@ -6,7 +6,7 @@ require_once __DIR__ . '/Kart.php';
 require_once __DIR__ . '/CreditCard.php';
 require_once __DIR__ . '/User.php';
 
-class RegisteredUser extends User{
+class UnregisteredUser extends User{
 
     protected $id;
     protected $username;
@@ -33,7 +33,6 @@ class RegisteredUser extends User{
     public function getusername(){
         return $this->username;
     }
-
 }
 
 // ordine - utente e carta di credito

@@ -2,30 +2,31 @@
 
 require_once __DIR__ . '/CreditCard.php';
 require_once __DIR__ . '/Product.php';
-require_once __DIR__ . '/Cart.php';
+require_once __DIR__ . '/Kart.php';
 require_once __DIR__ . '/CreditCard.php';
 
 class User{
 
-    protected $cart = [];
+    protected $kart;
     protected $creditCard;
+    protected $address;
 
-    function __construct($_cart, $_creditCard)
+    function __construct($_kart, $_creditCard)
     {
-        $this->setCart($_cart);
+        $this->setKart($_kart);
         $this->setCreditCard($_creditCard);
     }
 
-    private function setCart($_cart){
-        $this->cart = $_cart;
+    private function setKart($_kart){
+        $this->kart = $_kart;
     }
 
     private function setCreditCard($_creditCard){
         $this->creditCard = $_creditCard;
     }
 
-    public function getCart(){
-        return $this->cart;
+    public function getKart(){
+        return $this->kart;
     }
 
     public function getCreditCard(){
