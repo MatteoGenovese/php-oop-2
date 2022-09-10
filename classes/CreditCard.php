@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/CreditCard.php';
 require_once __DIR__ . '/Product.php';
-require_once __DIR__ . '/Kart.php';
+require_once __DIR__ . '/Cart.php';
 require_once __DIR__ . '/User.php';
 
 class CreditCard {
